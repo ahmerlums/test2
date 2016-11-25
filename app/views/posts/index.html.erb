@@ -1,0 +1,10 @@
+<h1>S3 Image app</h1>
+ 
+<%= link_to "Add new post", new_post_path %>
+ 
+<br>
+ 
+<% @post.each do |post| %>
+	<%= post.title %>
+	<img src = <%=post.image.url(:original)%> style = "width:100px;height:200px">
+<% end %>
